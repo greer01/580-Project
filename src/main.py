@@ -1,3 +1,4 @@
+from ai_coach import ask_golf_ai, generate_practice_plan
 import sqlite3
 import subprocess
 import time
@@ -162,7 +163,8 @@ def main():
         print("2.  List Golfers")
         print("3.  Recommend Course Type")
         print("4.  Ask AI Coach")
-        print("5.  Quit")
+        print ("5.  Generate Practice Plan")
+        print("6.  Quit")
 
         choice = input("\nSelect an option (1–5): ").strip()
 
@@ -216,8 +218,11 @@ def main():
 
         elif choice == "4":
             ask_ai_coach()
-
+        
         elif choice == "5":
+            generate_practice_plan()
+
+        elif choice == "6":
             print("\nGoodbye! ")
             break
 
